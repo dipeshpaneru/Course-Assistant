@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "stage": "baseline",
+    "question": "What is lymphosarcoma in fish, and what diagnostic methods are used to confirm it?",
+    "reference": "Lymphosarcoma is a type of cancer affecting the lymphoid tissues in fish. In some species, such as northern pike and muskellunge, it is suspected to be of retroviral origin, though the cause in other species remains undetermined. Diagnosis involves multiple steps:  \n1. **Biopsy** of the lesion to obtain tissue samples.  \n2. **Impression smear** to examine cellular morphology.  \n3. **Histology** to confirm cancerous changes in the tissue.  \n4. **Aerobic microbial culture** to rule out bacterial infections, as lymphosarcoma typically yields no bacterial growth.  \n\nIn the documented case of a *Pseudotropheus* cichlid, these methods confirmed lymphosarcoma, though the fish died before treatment could be initiated.",
+    "prediction": "What is the method of diagnosis of the disease? How can you get rid of a disease? What does this mean for an individual with the disease? Is there any treatment or prevention that can help me control my condition? Does anyone have experience with the disease or has he been exposed at all times before? The answers will be interesting.\nHow to deal with the disease? How not to fall into the trap of illnesses? What is the best way to manage my health problems if they arise from time to time, as well as prevent them when I'm young enough ? How should one act on diseases if I want to keep them under control without medication? How do we take care about our health during the day? What is the main rule here: exercise every morning?\nWhat is a disease, how much damage may cause it? How effective is the treatment of a disease? It is important now! Why did someone come up with such an idea today?.",
+    "perplexity": 18.050138473510742,
+    "rouge1": 0.21897810218978103,
+    "rouge2": 0.029411764705882353,
+    "rougeL": 0.11678832116788321,
+    "repetition_rate": 0.0765
+  },
+  {
+    "index": 1,
+    "stage": "baseline",
+    "question": "Find the differential equation of all circles that pass through the origin and have their centers lying on the x-axis.",
+    "reference": "1. **General Equation of the Circle:**\n   The general equation of a circle with center \\((a, 0)\\) on the x-axis and radius \\(r\\) is:\n   \\[\n   (x - a)^2 + y^2 = r^2\n   \\]\n   Since the circle passes through the origin \\((0, 0)\\), substituting gives:\n   \\[\n   (0 - a)^2 + 0^2 = r^2 \\implies r^2 = a^2\n   \\]\n   Thus, the equation becomes:\n   \\[\n   (x - a)^2 + y^2 = a^2\n   \\]\n   Expanding this:\n   \\[\n   x^2 - 2ax + y^2 = 0 \\quad \\text{(1)}\n   \\]\n\n2. **Differentiating to Eliminate the Parameter \\(a\\):**\n   Differentiate equation (1) with respect to \\(x\\):\n   \\[\n   2x - 2a + 2y \\frac{dy}{dx} = 0 \\implies x - a + y \\frac{dy}{dx} = 0 \\quad \\text{(2)}\n   \\]\n   Solve for \\(a\\) from equation (2):\n   \\[\n   a = x + y \\frac{dy}{dx}\n   \\]\n   Substitute \\(a\\) back into equation (1):\n   \\[\n   x^2 - 2\\left(x + y \\frac{dy}{dx}\\right)x + y^2 = 0\n   \\]\n   Simplify:\n   \\[\n   x^2 - 2x^2 - 2xy \\frac{dy}{dx} + y^2 = 0 \\implies -x^2 - 2xy \\frac{dy}{dx} + y^2 = 0\n   \\]\n   Rearrange to form the differential equation:\n   \\[\n   2xy \\frac{dy}{dx} = y^2 - x^2 \\implies \\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}\n   \\]\n\n3. **Final Differential Equation:**\n   \\[\n   \\boxed{\\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}}\n   \\]\n\nThis is the required differential equation for all circles passing through the origin with centers on the x-axis.",
+    "prediction": "And it is a good thing to keep in mind, especially if you're a writer or creator who has to make decisions about where your work will be distributed online: that the most effective way for people to access what they want from you is not necessarily via one platform over another but rather by the entire web itself, which means that your stuff can end up being found elsewhere than just on Facebook or Twitter or Tumblr (or any other one of thousands upon thousands of platforms). It's possible this could result in some of those sites and apps being dropped off entirely as the rest of us discover new and exciting ways to find our favorite bloggers instead; we hope so!\nYou can read more about this here at Mashable .\nIf You Don't Know Where Your Content Is Going To Be Found\u2026What Are The Chances That Any Of Them Will Ever See A Penny Or Two?",
+    "perplexity": 16.086584091186523,
+    "rouge1": 0.10498687664041995,
+    "rouge2": 0.0,
+    "rougeL": 0.06299212598425197,
+    "repetition_rate": 0.0063
+  },
+  {
+    "index": 2,
+    "stage": "baseline",
+    "question": "In the Hindu-Arabic number system, each period has three values assigned to it. These values are the same for each period. From right to left, what are they?",
+    "reference": "Let's break down the structure of the Hindu-Arabic number system to understand the values assigned to each period.\n\n### Understanding the Hindu-Arabic Number System\nThe Hindu-Arabic number system is a positional (or place-value) system, which means the value of a digit depends on its position in the number. The system is organized into periods, which are groups of three digits separated by commas (or spaces in some cultures) for easier readability. \n\n### Structure of Periods\nEach period in the Hindu-Arabic number system consists of three place values. These place values are the same for every period, and they repeat from right to left. \n\nFrom right to left within each period, the three place values are:\n1. **Ones (or units)**\n2. **Tens**\n3. **Hundreds**\n\n### Example of Periods in a Number\nLet's take a large number to illustrate this: 123,456,789.\n\n- The rightmost period is \"789\":\n  - 9 is in the **ones** place.\n  - 8 is in the **tens** place.\n  - 7 is in the **hundreds** place.\n- The next period to the left is \"456\":\n  - 6 is in the **ones** place.\n  - 5 is in the **tens** place.\n  - 4 is in the **hundreds** place.\n- The leftmost period is \"123\":\n  - 3 is in the **ones** place.\n  - 2 is in the **tens** place.\n  - 1 is in the **hundreds** place.\n\n### Repeating Pattern\nNo matter how large the number, each period (except possibly the leftmost one, which might have fewer digits) has these three place values repeating in the same order: ones, tens, hundreds.\n\n### Final Answer\nFrom right to left, the three values assigned to each period in the Hindu-Arabic number system are:\n1. **Ones (units)**\n2. **Tens**\n3. **Hundreds**",
+    "prediction": "3. The following is a list of items that you will need in order to build your own version of an air conditioner:\nA. A fan motor and gearbox\nB. Two compressors (one with two coils)\nC. An evaporator unit which can be made out of either plastic or metal sheets cut into rectangular shapes measuring 10 cm by 65 cm; this should have four fins per side.\nD. Two sets of condenser units with one set being used as a base for the other. This means there would only be half of the condensers used on both sides. Each condenser unit must measure about 24 cm long x 7cm wide x 8 cm high. There also needs to be at least six pieces of insulation material that measures 29 cm long x 15 cm deep x 8 cm thick. Also needed are one set of pipes and hoses that",
+    "perplexity": 8.101885795593262,
+    "rouge1": 0.17330210772833723,
+    "rouge2": 0.009411764705882352,
+    "rougeL": 0.08430913348946135,
+    "repetition_rate": 0.0336
+  },
+  {
+    "index": 3,
+    "stage": "baseline",
+    "question": "What is the product formed when oxalic acid \\((\\text{COOH})_2\\) reacts with ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid?",
+    "reference": "The reaction between oxalic acid \\((\\text{COOH})_2\\) and ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid is an esterification reaction. The product is a cyclic ester (lactone), specifically **ethylene oxalate** (a 5-membered ring structure). The reaction proceeds as follows:\n\n1. The hydroxyl groups of ethylene glycol react with the carboxyl groups of oxalic acid, eliminating water molecules.\n2. The cyclic ester forms due to intramolecular esterification, facilitated by the concentrated sulfuric acid as a dehydrating agent.\n\nThe structure of the product is:\n\n\\[\n\\boxed{\\text{O} = \\text{C} - \\text{O} - \\text{CH}_2 - \\text{CH}_2 - \\text{O} - \\text{C} = \\text{O}}\n\\]",
+    "prediction": "\\text message for what is the product formed on the presence of concentruted sulfuric acid (\\(Sulfur acid formed on the presence overs what you want to what is the product. The product formed, oxidized to what is the purpose of the product formed to oxyhydrogen. It is a weak base that is formed from what is the purpose and product of the formation of oxygen 10 and water (H2O). Oxide is an inorganic compound that is the form of oxygen 9 and hydroxides or hydro-oxyde. It has been formed by forming a strong carbonate cement which it is an oxoacid. It can be used as a weak acids are used because they are stronger than their bases to hydrochlorous acid to form the product. They also have an oxohydride cation that is formed through reaction of the oxone with the hydrocarbon. These ox",
+    "perplexity": 18.19829750061035,
+    "rouge1": 0.30708661417322836,
+    "rouge2": 0.0873015873015873,
+    "rougeL": 0.1889763779527559,
+    "repetition_rate": 0.1761
+  }
+]

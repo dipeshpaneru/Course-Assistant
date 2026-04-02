@@ -1,4 +1,6 @@
 from datasets import load_dataset, load_from_disk
+import json
+from datetime import datetime
 import torch
 import os
 
@@ -48,5 +50,15 @@ def retrieve_datasets():
     return dataset, train_dataset, val_dataset, test_dataset
 
 
+def save_logs(version, full_results, summary):
 
+    os.makedirs('./outputs', exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
+    with open(f'./outputs/{version}_full_{timestamp}.json', 'w') as f:
+        json.dump(full_results, f, indent=2)
+
+    with open(f'./outputs/{version}_summary_{timestamp}.json', 'w') as f:
+        json.dump(summary, f, indent=2)
+
+    print(f"\n✅ Logs saved to outputs/")

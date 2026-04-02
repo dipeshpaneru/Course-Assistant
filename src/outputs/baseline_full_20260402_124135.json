@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "stage": "baseline",
+    "question": "What is lymphosarcoma in fish, and what diagnostic methods are used to confirm it?",
+    "reference": "Lymphosarcoma is a type of cancer affecting the lymphoid tissues in fish. In some species, such as northern pike and muskellunge, it is suspected to be of retroviral origin, though the cause in other species remains undetermined. Diagnosis involves multiple steps:  \n1. **Biopsy** of the lesion to obtain tissue samples.  \n2. **Impression smear** to examine cellular morphology.  \n3. **Histology** to confirm cancerous changes in the tissue.  \n4. **Aerobic microbial culture** to rule out bacterial infections, as lymphosarcoma typically yields no bacterial growth.  \n\nIn the documented case of a *Pseudotropheus* cichlid, these methods confirmed lymphosarcoma, though the fish died before treatment could be initiated.",
+    "prediction": "The most what fish, the most what laminating methods are used to diagnose the most what fish.\nWhat is the most laminating methods used to diagnose?\nThe most what laminated materials are used for diagnosis of the most what? The most what diagnostics are used in fish? What is what laminate? The most what laminates the most what? What is a lamination used as a test? The most what? What laminations are used for diagnosing? How do you use what to diagnose? Is what used for testing what? The most when using what?",
+    "perplexity": 10.542762756347656,
+    "rouge1": 0.20408163265306123,
+    "rouge2": 0.03092783505154639,
+    "rougeL": 0.1326530612244898,
+    "repetition_rate": 0.3261
+  },
+  {
+    "index": 1,
+    "stage": "baseline",
+    "question": "Find the differential equation of all circles that pass through the origin and have their centers lying on the x-axis.",
+    "reference": "1. **General Equation of the Circle:**\n   The general equation of a circle with center \\((a, 0)\\) on the x-axis and radius \\(r\\) is:\n   \\[\n   (x - a)^2 + y^2 = r^2\n   \\]\n   Since the circle passes through the origin \\((0, 0)\\), substituting gives:\n   \\[\n   (0 - a)^2 + 0^2 = r^2 \\implies r^2 = a^2\n   \\]\n   Thus, the equation becomes:\n   \\[\n   (x - a)^2 + y^2 = a^2\n   \\]\n   Expanding this:\n   \\[\n   x^2 - 2ax + y^2 = 0 \\quad \\text{(1)}\n   \\]\n\n2. **Differentiating to Eliminate the Parameter \\(a\\):**\n   Differentiate equation (1) with respect to \\(x\\):\n   \\[\n   2x - 2a + 2y \\frac{dy}{dx} = 0 \\implies x - a + y \\frac{dy}{dx} = 0 \\quad \\text{(2)}\n   \\]\n   Solve for \\(a\\) from equation (2):\n   \\[\n   a = x + y \\frac{dy}{dx}\n   \\]\n   Substitute \\(a\\) back into equation (1):\n   \\[\n   x^2 - 2\\left(x + y \\frac{dy}{dx}\\right)x + y^2 = 0\n   \\]\n   Simplify:\n   \\[\n   x^2 - 2x^2 - 2xy \\frac{dy}{dx} + y^2 = 0 \\implies -x^2 - 2xy \\frac{dy}{dx} + y^2 = 0\n   \\]\n   Rearrange to form the differential equation:\n   \\[\n   2xy \\frac{dy}{dx} = y^2 - x^2 \\implies \\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}\n   \\]\n\n3. **Final Differential Equation:**\n   \\[\n   \\boxed{\\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}}\n   \\]\n\nThis is the required differential equation for all circles passing through the origin with centers on the x-axis.",
+    "prediction": "2.0.1 The first line of the figure is labeled \"A.\" This line represents a line segment from A to B. The second line is labeled, in degrees: 57\u00b0. The third line is also called an arc or circle, as it connects two points on one side (or arc) with another point on its opposite end. The fourth line is the x axis, which starts at zero degrees latitude north and goes upward until reaching the northern pole. There are three lines that start at 90\u00b0 degrees latitude south: the southernmost line is labeled P; this line passes directly over the equator and ends near the Tropic of Capricorn; then there's an arc connecting Cape Horn\u2014at 63\u00b0 S\u2014with the Antarctic Circle, which is about 84\u00baS, where it intersects the Southern Hemisphere circle again. Next comes the second straight line starting at 84",
+    "perplexity": 2.498171091079712,
+    "rouge1": 0.20218579234972678,
+    "rouge2": 0.03296703296703297,
+    "rougeL": 0.12021857923497267,
+    "repetition_rate": 0.0571
+  },
+  {
+    "index": 2,
+    "stage": "baseline",
+    "question": "In the Hindu-Arabic number system, each period has three values assigned to it. These values are the same for each period. From right to left, what are they?",
+    "reference": "Let's break down the structure of the Hindu-Arabic number system to understand the values assigned to each period.\n\n### Understanding the Hindu-Arabic Number System\nThe Hindu-Arabic number system is a positional (or place-value) system, which means the value of a digit depends on its position in the number. The system is organized into periods, which are groups of three digits separated by commas (or spaces in some cultures) for easier readability. \n\n### Structure of Periods\nEach period in the Hindu-Arabic number system consists of three place values. These place values are the same for every period, and they repeat from right to left. \n\nFrom right to left within each period, the three place values are:\n1. **Ones (or units)**\n2. **Tens**\n3. **Hundreds**\n\n### Example of Periods in a Number\nLet's take a large number to illustrate this: 123,456,789.\n\n- The rightmost period is \"789\":\n  - 9 is in the **ones** place.\n  - 8 is in the **tens** place.\n  - 7 is in the **hundreds** place.\n- The next period to the left is \"456\":\n  - 6 is in the **ones** place.\n  - 5 is in the **tens** place.\n  - 4 is in the **hundreds** place.\n- The leftmost period is \"123\":\n  - 3 is in the **ones** place.\n  - 2 is in the **tens** place.\n  - 1 is in the **hundreds** place.\n\n### Repeating Pattern\nNo matter how large the number, each period (except possibly the leftmost one, which might have fewer digits) has these three place values repeating in the same order: ones, tens, hundreds.\n\n### Final Answer\nFrom right to left, the three values assigned to each period in the Hindu-Arabic number system are:\n1. **Ones (units)**\n2. **Tens**\n3. **Hundreds**",
+    "prediction": "The following table shows the values of 256-bit numbers:\nTable 1. Values in a 30 bit Number System from Right To Left\nValues From The First Bit To The Last Bit\nFirst bit = 0 or 1; Second and Third bits have no significance\nFourth bit is 1 if first two are zero (zero) or one\nSixth bit is always non-significant, with value 1\nSeventh bit is always non significant, with value -1 unless its second bit is set equal to 1 and third bit is also set equal to 0\nEighth bit is 1 only when either fourth bit equals 1 nor fifth bit equals 0 nor sixth bit equals 0 but seventh bit equals 1/48 times 7*6\nNinth bit is not used since it can't be changed by any operation except negation on the previous eight bits without affect",
+    "perplexity": 3.8066599369049072,
+    "rouge1": 0.2227488151658768,
+    "rouge2": 0.03809523809523809,
+    "rougeL": 0.1279620853080569,
+    "repetition_rate": 0.1429
+  },
+  {
+    "index": 3,
+    "stage": "baseline",
+    "question": "What is the product formed when oxalic acid \\((\\text{COOH})_2\\) reacts with ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid?",
+    "reference": "The reaction between oxalic acid \\((\\text{COOH})_2\\) and ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid is an esterification reaction. The product is a cyclic ester (lactone), specifically **ethylene oxalate** (a 5-membered ring structure). The reaction proceeds as follows:\n\n1. The hydroxyl groups of ethylene glycol react with the carboxyl groups of oxalic acid, eliminating water molecules.\n2. The cyclic ester forms due to intramolecular esterification, facilitated by the concentrated sulfuric acid as a dehydrating agent.\n\nThe structure of the product is:\n\n\\[\n\\boxed{\\text{O} = \\text{C} - \\text{O} - \\text{CH}_2 - \\text{CH}_2 - \\text{O} - \\text{C} = \\text{O}}\n\\]",
+    "prediction": "what does what ethics react to ethnically reacting in the presence of ethyline reactively reacting in the presentation of ethnicity in the presence of the ethanitely reactivating in the presence of chlorine in the presentation of chlorite in the presentation of copper to reactive to the presence of chore for the ethnomusique to the chorus to the choral piece to the chorale to the chordelement to the chorematerial to the choruletenthorical piece to the choro-material to the chorno-literary piece to the choriotolatry to the chorous piece to the chorteleto to the choretelateral piece to the chorispecial piece to the chora-literary piece (often referred as the chord or chords to the chora to the chores to the chorales and the choral piece(ethnicities)",
+    "perplexity": 8.821996688842773,
+    "rouge1": 0.1702127659574468,
+    "rouge2": 0.034334763948497854,
+    "rougeL": 0.14468085106382977,
+    "repetition_rate": 0.325
+  },
+  {
+    "index": 4,
+    "stage": "baseline",
+    "question": "Can we conclude that patients with primary hypertension (PH), on the average, have higher total cholesterol levels than normotensive (NT) patients? The data consists of 133 PH patients and 41 NT patients. The significance level is \\( \\alpha = 0.05 \\).",
+    "reference": "To determine whether PH patients have higher total cholesterol levels than NT patients, we perform a two-sample \\( t \\)-test for the difference in means. Here are the steps:\n\n1. **State the hypotheses**:\n   - Null hypothesis (\\( H_0 \\)): The mean total cholesterol level of PH patients is equal to that of NT patients (\\( \\mu_{PH} = \\mu_{NT} \\)).\n   - Alternative hypothesis (\\( H_1 \\)): The mean total cholesterol level of PH patients is higher than that of NT patients (\\( \\mu_{PH} > \\mu_{NT} \\)).\n\n2. **Calculate the test statistic**:\n   - The test statistic for comparing two independent means is:\n     \\[\n     t = \\frac{\\bar{x}_{PH} - \\bar{x}_{NT}}{\\sqrt{\\frac{s_{PH}^2}{n_{PH}} + \\frac{s_{NT}^2}{n_{NT}}}}\n     \\]\n     where \\( \\bar{x}_{PH} \\) and \\( \\bar{x}_{NT} \\) are the sample means, \\( s_{PH} \\) and \\( s_{NT} \\) are the sample standard deviations, and \\( n_{PH} \\) and \\( n_{NT} \\) are the sample sizes.\n\n3. **Compare the test statistic to the critical value**:\n   - For a one-tailed test at \\( \\alpha = 0.05 \\), the critical \\( t \\)-value (with degrees of freedom approximated using the Welch-Satterthwaite equation) is approximately 1.66.\n   - If the calculated \\( t \\)-statistic is greater than 1.66, we reject the null hypothesis.\n\n4. **Conclusion**:\n   - The data provide sufficient evidence to conclude that PH patients have higher total cholesterol levels than NT patients (\\( t > 1.66 \\), \\( p < 0.05 \\)).\n\nThus, the answer is:  \n\\[\n\\boxed{\\text{Yes, the data provide sufficient evidence to conclude that PH patients have higher total cholesterol levels than NT patients at } \\alpha = 0.05.}\n\\]",
+    "prediction": "The sample size in this study was determined by using the formula below:\nwhere n is the number of patients; p is a probability value for patients to be observed; and d is the desired effect size, which depends upon the type of research question being asked [26]. For example, if one were interested only in finding out how many patients are observed per year, then one would need about 97% or more of all patients to observe at least two patients each year as well as having an observation rate greater than 80%. If you were looking into whether there has been an increase over time within your institution's patient population regarding the number of patients who are observed annually (perhaps with an observation rate above 90%) but also had an increased average observation rate across years compared to previous observations rates, it may not make sense to recruit additional patients since the number of patients being observed should already meet those criteria for this study based solely off historical trends",
+    "perplexity": 2.7051970958709717,
+    "rouge1": 0.2588235294117647,
+    "rouge2": 0.02364066193853428,
+    "rougeL": 0.11764705882352941,
+    "repetition_rate": 0.0702
+  },
+  {
+    "index": 5,
+    "stage": "baseline",
+    "question": "What are the clinical, laboratory, and imaging diagnostic criteria for acute coronary syndrome (ACS)?",
+    "reference": "The diagnostic criteria for ACS include:\n1. **Clinical Criteria:**\n   - **History:** Location of pain (e.g., substernal), radiation of pain (e.g., to the arm or jaw), severity of pain, timing of pain (e.g., sudden onset), provoking/palliative actions (e.g., worsened by exertion, relieved by rest), and associated symptoms (e.g., diaphoresis, nausea).\n   - **Physical Examination:** Vital signs (e.g., tachycardia, hypotension), cardiac examination (e.g., murmurs, gallops), and signs of heart failure (e.g., jugular venous distension, rales).\n\n2. **Laboratory Criteria:**\n   - **Cardiac Markers:** Elevated troponin or creatine kinase-MB (CK-MB).\n   - **Other Tests:** Complete blood count (CBC), chemistry panel, and D-dimer (if pulmonary embolism is suspected).\n\n3. **Imaging Criteria:**\n   - **Electrocardiography (ECG):** ST-segment elevation (STEMI), ST-segment depression, or T-wave inversions (NSTEMI/unstable angina).\n   - **Chest X-ray:** May show pulmonary edema or other signs of heart failure.\n   - **Echocardiography:** Wall motion abnormalities or reduced ejection fraction.\n   - **Helical CT or Coronary Angiography:** For suspected aortic dissection or coronary artery occlusion.",
+    "prediction": "What are the clinical and laboratorial diagnostic criteria of acute coronal syndromes? What is the clinicopathological spectrum in the acetylcholine receptor antibody-positive patients with acute coronary events (ACE) after myocardial infarction (MI), and what is their diagnostic algorithm? Are there any differences between these two groups when using echocardiographic criteria to diagnose ACE? Do you recommend echocardiography as a routine test or as a supplement if only electrocardiogram (ECG)/echocardiographically confirmed ACE? Can we use echocardiographical measurements alone without ECG/CT scan findings of MI and ACE as an indication for early revascularization surgery(s) within 6 weeks postoperatively?. How can one diagnosed as a patient with \"ACES\" before ACS ? What about the clin",
+    "perplexity": 4.033075332641602,
+    "rouge1": 0.16666666666666666,
+    "rouge2": 0.007299270072992701,
+    "rougeL": 0.08695652173913045,
+    "repetition_rate": 0.027
+  },
+  {
+    "index": 6,
+    "stage": "baseline",
+    "question": "A 2 lb weight stretches a spring 0.32 ft. The weight is initially displaced 4 inches below equilibrium and given an upward velocity of 5 ft/sec. The medium provides damping with constant \\( c = \\frac{1}{8} \\) lb-sec/ft. Find the displacement \\( y(t) \\) for \\( t > 0 \\).",
+    "reference": "The displacement \\( y(t) \\) for \\( t > 0 \\) is given by:\n\\[\ny(t) = e^{-t} \\left( \\frac{1}{3} \\cos(3 \\sqrt{11} t) - \\frac{14}{9 \\sqrt{11}} \\sin(3 \\sqrt{11} t) \\right).\n\\]\nThis represents an underdamped oscillation with an exponentially decaying amplitude. The motion oscillates with a frequency of \\( 3 \\sqrt{11} \\) rad/sec and a damping factor of \\( e^{-t} \\). The initial conditions are satisfied, and the displacement approaches zero as \\( t \\to \\infty \\). \n\nFor graphing, the solution can be rewritten in amplitude-phase form as:\n\\[\ny(t) = A e^{-t} \\cos(3 \\sqrt{11} t - \\phi),\n\\]\nwhere \\( A = \\sqrt{\\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{14}{9 \\sqrt{11}}\\right)^2} \\) and \\( \\phi = \\tan^{-1}\\left(\\frac{14}{3 \\sqrt{11}}\\right) \\). \n\nThe graph would show a decaying oscillation starting from \\( y(0) = \\frac{1}{3} \\) ft with an initial upward velocity of 5 ft/sec. The envelope of the oscillation decays as \\( e^{-t} \\). \n\n\\[\n\\boxed{y(t) = e^{-t} \\left( \\frac{1}{3} \\cos(3 \\sqrt{11} t) - \\frac{14}{9 \\sqrt{11}} \\sin(3 \\sqrt{11} t) \\right)}\n\\]",
+    "prediction": "The following figure shows the system's trajectory as it reaches equilibrium at time \\( T_e \\) . This position corresponds to a maximum linear acceleration.\n\\begin{align*} & \\\\\ny_{eq}(T)=& -\\left[\\frac{\\partial v}{\\partial x}\\right]_{\\theta=0}+v=\\left[-\\cos(\\phi)\\sin (\\alpha)+x+\\sqrt{(a+b)^2-(c+d)^2}-cx-\\dfrac{a+b}{(2a+b)}\\cot ^2(\\alpha )+(d-c)-dy+dx +z \\right].\\\\\n&\\end{align*}\\\\\nFigure \\(\\PageIndex{6}\\) The trajectories in motion.\nWe can now calculate what happens when we apply forces on either side of this system. When the force acts from above, that means downwards; so, \\(\\mathbf F^\\prime\\) will act opposite direction compared with its initial value. Therefore,",
+    "perplexity": 3.3557345867156982,
+    "rouge1": 0.22591362126245848,
+    "rouge2": 0.020066889632107024,
+    "rougeL": 0.11960132890365449,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 7,
+    "stage": "baseline",
+    "question": "Prove that the complex series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) diverges, where \\( i \\) is the imaginary unit.",
+    "reference": "To prove the divergence of the series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\), we analyze the magnitude of its terms.  \n\n1. **Magnitude of Terms**:  \n   The general term of the series is \\( \\frac{1}{n^{1+i}} = \\frac{1}{n} \\cdot n^{-i} \\).  \n   The magnitude of \\( n^{-i} \\) is \\( |n^{-i}| = |e^{-i \\ln n}| = 1 \\), since \\( e^{-i \\ln n} \\) lies on the unit circle.  \n   Thus, the magnitude of the term is \\( \\left| \\frac{1}{n^{1+i}} \\right| = \\frac{1}{n} \\).  \n\n2. **Comparison to Harmonic Series**:  \n   The series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n} \\) is the harmonic series, which is known to diverge.  \n   Since the magnitude of the terms of \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) matches the harmonic series, the original series cannot converge absolutely.  \n\n3. **Conclusion**:  \n   If the series were convergent, the magnitudes of its terms would have to tend to zero in a way that allows the partial sums to converge. However, the magnitudes \\( \\frac{1}{n} \\) do not decrease fast enough to ensure convergence.  \n   Therefore, the series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) diverges.  \n\n   \\(\\boxed{\\text{The series } \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\text{ diverges.}}\\)",
+    "prediction": "We also have the following generalizations of complex numbers: The real part and the absolute value of a number are defined by \\(\\mathrm {Re}(z) = z\\) for all complex numbers, and we say an element has positive or negative real part if its real (absolute) part equals to zero; the signum function \\(\\sigma(x)\\) denotes whether x is a nonnegative integer in this case it is not possible to find such x without any restriction on y because the signs of even and odd integers do not agree with each other. Similarly, the signum function \u03c3(-y), which means the signum function of \u2212y, exists only when both sides of inequality are nonzero. We define addition and multiplication operations over these complex numbers as follows:\nDefinition : If \\(z_0 + c\\in Z^+\\text ,\\) then \\(c=\\pm e^{-j2\u03c0/3}\\) ; otherwise, there exist no elements of type \\((-e)^{",
+    "perplexity": 3.0899481773376465,
+    "rouge1": 0.19428571428571428,
+    "rouge2": 0.011494252873563216,
+    "rougeL": 0.11428571428571428,
+    "repetition_rate": 0.0352
+  },
+  {
+    "index": 8,
+    "stage": "baseline",
+    "question": "Given the scarcity of organs for transplantation, should patients with certain lifestyle choices (e.g., substance abuse, poor diet) or preexisting conditions be prioritized for transplants or other medical interventions? How do ethical principles like distributive justice, medical necessity, and respect for dignity inform this decision?",
+    "reference": "Ethical principles suggest that patients should not be unfairly penalized for lifestyle choices or preexisting conditions. However, the allocation of scarce resources like organs for transplantation requires careful prioritization based on medical necessity and the likelihood of successful treatment. Key considerations include:  \n\n1. **Distributive Justice**: Organs should be allocated fairly, without discrimination based on socioeconomic status or health habits. However, factors like the recipient\u2019s age, overall health, and the probable viability of the transplant may be ethically justifiable criteria for prioritization.  \n2. **Medical Necessity**: Patients with urgent needs and higher chances of long-term survival should be prioritized to maximize the benefit of limited resources.  \n3. **Avoidance of Harm**: Prioritizing patients who are more likely to adhere to post-transplant care (e.g., avoiding substance abuse) can reduce the risk of organ rejection and wasted resources.  \n4. **Respect for Dignity**: While patients with self-inflicted conditions (e.g., alcohol-related liver disease) should not be automatically excluded, their ability to comply with treatment plans may be a relevant factor in allocation decisions.  \n\nUltimately, the decision should balance fairness, medical efficacy, and the ethical obligation to use scarce resources responsibly. $\\boxed{\\text{Ethical allocation should prioritize medical necessity and likelihood of success, while avoiding unjust discrimination based on lifestyle or preexisting conditions.}}$",
+    "prediction": "This is a discussion that needs to happen as soon as possible in order not only to determine who receives these treatments but also how we can ensure they are equitable across different groups at risk of being left out because their treatment decisions have been made by others without them having any say about it themselves.\"\n\"I am a 45 year old African-American male living within an urban environment. I have experienced many of my life's challenges such as homelessness on several occasions; incarcerated numerous times over the years, and I suffer from mental ill health disorders including schizophrenia, bipolar disease & depression\u2026.I have been diagnosed with 2 autoimmune diseases: Systemic Lupus Erythematosis which has been affecting me since childhood and Sjogren's Syndrome \u2026..I was recently referred to a new psychiatrist after being in therapy/behavior",
+    "perplexity": 8.256559371948242,
+    "rouge1": 0.17613636363636362,
+    "rouge2": 0.005714285714285714,
+    "rougeL": 0.07954545454545454,
+    "repetition_rate": 0.0074
+  },
+  {
+    "index": 9,
+    "stage": "baseline",
+    "question": "During which interval on the ECG does the bundle of His depolarize?",
+    "reference": "The bundle of His depolarizes during the **PR interval** (represented by point C on the ECG). This interval includes the time from atrial depolarization (P wave) to the start of ventricular depolarization (QRS complex), during which the action potential passes through the AV node and the bundle of His. Thus, the correct answer is $\\boxed{C}$.",
+    "prediction": "The diagram for the diagram of the diagram of the ECD of the ECD is to be seen and EVIDENCE.\nThe ELECTRICITY of EVOLUTION. The EVE of ELEMENTS. The EVERYTHING of ENEMY to ECOSYSTEM. ENGINEER OF ENTERTAINERS. ENLIGHTEMED of ENTREPRENUERS. EQUALIZATION of EXPERIENTIALS. THE EXIST-MENTION of EXPECTANTS. The EXPLOSIVE of EXPRESSION. EXPOSURE of EXPLOITED. Explosion of the Experimental Experimentation of Existence. Experiential Expectant Experience of Experienced Expertise.\nExperts in the Experiments with Explanations of Existing Examples of Experiemental Facts.\nThe EXPOSE",
+    "perplexity": 73.72167205810547,
+    "rouge1": 0.21739130434782608,
+    "rouge2": 0.0,
+    "rougeL": 0.1884057971014493,
+    "repetition_rate": 0.0875
+  }
+]

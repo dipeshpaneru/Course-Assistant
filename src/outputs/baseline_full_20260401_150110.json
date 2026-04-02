@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "stage": "baseline",
+    "question": "What is lymphosarcoma in fish, and what diagnostic methods are used to confirm it?",
+    "reference": "Lymphosarcoma is a type of cancer affecting the lymphoid tissues in fish. In some species, such as northern pike and muskellunge, it is suspected to be of retroviral origin, though the cause in other species remains undetermined. Diagnosis involves multiple steps:  \n1. **Biopsy** of the lesion to obtain tissue samples.  \n2. **Impression smear** to examine cellular morphology.  \n3. **Histology** to confirm cancerous changes in the tissue.  \n4. **Aerobic microbial culture** to rule out bacterial infections, as lymphosarcoma typically yields no bacterial growth.  \n\nIn the documented case of a *Pseudotropheus* cichlid, these methods confirmed lymphosarcoma, though the fish died before treatment could be initiated.",
+    "prediction": "What is lymethat what is used for fish, what the what method What is used to film, what the what the what method How to fish, and what the what diagnostics What is lighthit what the what method how to fish, what diagnostics of films what methodology of fish, and what of lighter of fish, and diagnostics of fish, and the what methods, and the what lysthythm of fish, and such as lyscope What is the lyman to what is used for films, and what diagnostics are used to confirm that? What is the lymethancestory What is used to fish, what type How can you confirm that it? What diagnostics lymethankathomewhat method How Can You Confirm It's Lights How Could You Confess It'What Diagnostics Of Fish What Is Used For Films What Is Diploma Method What The What Method How To Film What Is Diplays",
+    "perplexity": 14.608530044555664,
+    "rouge1": 0.22399999999999998,
+    "rouge2": 0.016129032258064516,
+    "rougeL": 0.14400000000000002,
+    "repetition_rate": 0.0845
+  },
+  {
+    "index": 1,
+    "stage": "baseline",
+    "question": "Find the differential equation of all circles that pass through the origin and have their centers lying on the x-axis.",
+    "reference": "1. **General Equation of the Circle:**\n   The general equation of a circle with center \\((a, 0)\\) on the x-axis and radius \\(r\\) is:\n   \\[\n   (x - a)^2 + y^2 = r^2\n   \\]\n   Since the circle passes through the origin \\((0, 0)\\), substituting gives:\n   \\[\n   (0 - a)^2 + 0^2 = r^2 \\implies r^2 = a^2\n   \\]\n   Thus, the equation becomes:\n   \\[\n   (x - a)^2 + y^2 = a^2\n   \\]\n   Expanding this:\n   \\[\n   x^2 - 2ax + y^2 = 0 \\quad \\text{(1)}\n   \\]\n\n2. **Differentiating to Eliminate the Parameter \\(a\\):**\n   Differentiate equation (1) with respect to \\(x\\):\n   \\[\n   2x - 2a + 2y \\frac{dy}{dx} = 0 \\implies x - a + y \\frac{dy}{dx} = 0 \\quad \\text{(2)}\n   \\]\n   Solve for \\(a\\) from equation (2):\n   \\[\n   a = x + y \\frac{dy}{dx}\n   \\]\n   Substitute \\(a\\) back into equation (1):\n   \\[\n   x^2 - 2\\left(x + y \\frac{dy}{dx}\\right)x + y^2 = 0\n   \\]\n   Simplify:\n   \\[\n   x^2 - 2x^2 - 2xy \\frac{dy}{dx} + y^2 = 0 \\implies -x^2 - 2xy \\frac{dy}{dx} + y^2 = 0\n   \\]\n   Rearrange to form the differential equation:\n   \\[\n   2xy \\frac{dy}{dx} = y^2 - x^2 \\implies \\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}\n   \\]\n\n3. **Final Differential Equation:**\n   \\[\n   \\boxed{\\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}}\n   \\]\n\nThis is the required differential equation for all circles passing through the origin with centers on the x-axis.",
+    "prediction": "The difference between the equations of the linear functions with a given slope is determined by the value for y. The function f(x) has a zero at 0, which means its derivative is undefined there (it's called \"differentiable\"). The graph of this function will be the same as any other piecewise continuous line in the interval [a, b]. A function can also exhibit discontinuity if it crosses one or more lines of symmetry\u2014the same thing happens to the sine function when you change your mind about what time period to use: when you switch from hourly to daily intervals, suddenly the sine wave jumps downward abruptly!\nIn general terms, we might say that an object moving along a curve can do so either slowly enough not to noticeably alter our position relative to where we started out; or quickly enough such that we don't feel like changing directions even while we do so. The idea behind the term",
+    "perplexity": 13.074973106384277,
+    "rouge1": 0.17322834645669294,
+    "rouge2": 0.0158311345646438,
+    "rougeL": 0.11548556430446194,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 2,
+    "stage": "baseline",
+    "question": "In the Hindu-Arabic number system, each period has three values assigned to it. These values are the same for each period. From right to left, what are they?",
+    "reference": "Let's break down the structure of the Hindu-Arabic number system to understand the values assigned to each period.\n\n### Understanding the Hindu-Arabic Number System\nThe Hindu-Arabic number system is a positional (or place-value) system, which means the value of a digit depends on its position in the number. The system is organized into periods, which are groups of three digits separated by commas (or spaces in some cultures) for easier readability. \n\n### Structure of Periods\nEach period in the Hindu-Arabic number system consists of three place values. These place values are the same for every period, and they repeat from right to left. \n\nFrom right to left within each period, the three place values are:\n1. **Ones (or units)**\n2. **Tens**\n3. **Hundreds**\n\n### Example of Periods in a Number\nLet's take a large number to illustrate this: 123,456,789.\n\n- The rightmost period is \"789\":\n  - 9 is in the **ones** place.\n  - 8 is in the **tens** place.\n  - 7 is in the **hundreds** place.\n- The next period to the left is \"456\":\n  - 6 is in the **ones** place.\n  - 5 is in the **tens** place.\n  - 4 is in the **hundreds** place.\n- The leftmost period is \"123\":\n  - 3 is in the **ones** place.\n  - 2 is in the **tens** place.\n  - 1 is in the **hundreds** place.\n\n### Repeating Pattern\nNo matter how large the number, each period (except possibly the leftmost one, which might have fewer digits) has these three place values repeating in the same order: ones, tens, hundreds.\n\n### Final Answer\nFrom right to left, the three values assigned to each period in the Hindu-Arabic number system are:\n1. **Ones (units)**\n2. **Tens**\n3. **Hundreds**",
+    "prediction": "(a) 12:05 a.m., 364 d = 7 days; (b) 8 p. m.; and (c) 9 a. o..\n\nSolution of Problems Nos. 1\u20134:\n\nThe value given is in hours since midnight (= 12 noon), because it is an hour after midnighteven though that time is not part of any day or date. The value given for each period of an ordinary calendar month is the time at which the next succeeding day begins. Hence there must be two values for every other day except Saturday and Sunday. Thus, from right to left we have the following:\n\n**_Problem 5_.** Write down these values in order, starting with the most recent day in ascending chronological sequence\u2014that is, beginning on Monday, January 1st, when the year began. Beginning clockwise around",
+    "perplexity": 11.38183307647705,
+    "rouge1": 0.2469135802469136,
+    "rouge2": 0.044665012406947896,
+    "rougeL": 0.14320987654320988,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 3,
+    "stage": "baseline",
+    "question": "What is the product formed when oxalic acid \\((\\text{COOH})_2\\) reacts with ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid?",
+    "reference": "The reaction between oxalic acid \\((\\text{COOH})_2\\) and ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid is an esterification reaction. The product is a cyclic ester (lactone), specifically **ethylene oxalate** (a 5-membered ring structure). The reaction proceeds as follows:\n\n1. The hydroxyl groups of ethylene glycol react with the carboxyl groups of oxalic acid, eliminating water molecules.\n2. The cyclic ester forms due to intramolecular esterification, facilitated by the concentrated sulfuric acid as a dehydrating agent.\n\nThe structure of the product is:\n\n\\[\n\\boxed{\\text{O} = \\text{C} - \\text{O} - \\text{CH}_2 - \\text{CH}_2 - \\text{O} - \\text{C} = \\text{O}}\n\\]",
+    "prediction": "\\(\\upmits what products what products form what products react what produces form what products produce what products react what products form what producers what products react what makes what products what productions what productions what makes what makes what makes.\nThe name of the product is also a clue to its nature, as well as the nature and purpose it serves:\nA cerebral aneurysms or aneurism is a bulging out or leakage from one of two walls (called arteries) that carry blood flowing through your brain tissue into your skull. The most common type of this condition is called subarachnoid hemorrhages. It's usually caused by trauma such as a car accident, but can be due to a stroke, infection, tumors within these vessels, or other conditions like diabetes mellitus. Subarachnoid haemorhagias are more likely to occur if you have certain",
+    "perplexity": 8.950650215148926,
+    "rouge1": 0.1832669322709163,
+    "rouge2": 0.04819277108433735,
+    "rougeL": 0.11155378486055777,
+    "repetition_rate": 0.0219
+  }
+]

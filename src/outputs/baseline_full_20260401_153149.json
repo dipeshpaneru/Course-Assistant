@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "stage": "baseline",
+    "question": "What is lymphosarcoma in fish, and what diagnostic methods are used to confirm it?",
+    "reference": "Lymphosarcoma is a type of cancer affecting the lymphoid tissues in fish. In some species, such as northern pike and muskellunge, it is suspected to be of retroviral origin, though the cause in other species remains undetermined. Diagnosis involves multiple steps:  \n1. **Biopsy** of the lesion to obtain tissue samples.  \n2. **Impression smear** to examine cellular morphology.  \n3. **Histology** to confirm cancerous changes in the tissue.  \n4. **Aerobic microbial culture** to rule out bacterial infections, as lymphosarcoma typically yields no bacterial growth.  \n\nIn the documented case of a *Pseudotropheus* cichlid, these methods confirmed lymphosarcoma, though the fish died before treatment could be initiated.",
+    "prediction": "and what methods are used to laminogram? and what methods of fish, and what method of fish? and what method or what type is used as lithographer, and what method or What Type Is Used As Loud Fish?, and What Type Of Fish It Is Used In Laugolo, and What Methods Are Used To Fish, and what methods do they use to fish?.\nThe study of the physical properties and behavior of materials, often called \"material science\", is a discipline that has grown up around a number of technological advances. Some of these have been made possible by the advancement of physics. The basic physical laws governing all matter on Earth can be applied to all types of material at any temperature and pressure level. Some of them may also apply when materials are subjected to extreme pressures (such as those encountered during volcanic eruptions), but only if they have not yet undergone chemical changes due to high temper",
+    "perplexity": 11.610230445861816,
+    "rouge1": 0.2366412213740458,
+    "rouge2": 0.038461538461538464,
+    "rougeL": 0.12213740458015265,
+    "repetition_rate": 0.1582
+  },
+  {
+    "index": 1,
+    "stage": "baseline",
+    "question": "Find the differential equation of all circles that pass through the origin and have their centers lying on the x-axis.",
+    "reference": "1. **General Equation of the Circle:**\n   The general equation of a circle with center \\((a, 0)\\) on the x-axis and radius \\(r\\) is:\n   \\[\n   (x - a)^2 + y^2 = r^2\n   \\]\n   Since the circle passes through the origin \\((0, 0)\\), substituting gives:\n   \\[\n   (0 - a)^2 + 0^2 = r^2 \\implies r^2 = a^2\n   \\]\n   Thus, the equation becomes:\n   \\[\n   (x - a)^2 + y^2 = a^2\n   \\]\n   Expanding this:\n   \\[\n   x^2 - 2ax + y^2 = 0 \\quad \\text{(1)}\n   \\]\n\n2. **Differentiating to Eliminate the Parameter \\(a\\):**\n   Differentiate equation (1) with respect to \\(x\\):\n   \\[\n   2x - 2a + 2y \\frac{dy}{dx} = 0 \\implies x - a + y \\frac{dy}{dx} = 0 \\quad \\text{(2)}\n   \\]\n   Solve for \\(a\\) from equation (2):\n   \\[\n   a = x + y \\frac{dy}{dx}\n   \\]\n   Substitute \\(a\\) back into equation (1):\n   \\[\n   x^2 - 2\\left(x + y \\frac{dy}{dx}\\right)x + y^2 = 0\n   \\]\n   Simplify:\n   \\[\n   x^2 - 2x^2 - 2xy \\frac{dy}{dx} + y^2 = 0 \\implies -x^2 - 2xy \\frac{dy}{dx} + y^2 = 0\n   \\]\n   Rearrange to form the differential equation:\n   \\[\n   2xy \\frac{dy}{dx} = y^2 - x^2 \\implies \\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}\n   \\]\n\n3. **Final Differential Equation:**\n   \\[\n   \\boxed{\\frac{dy}{dx} = \\frac{y^2 - x^2}{2xy}}\n   \\]\n\nThis is the required differential equation for all circles passing through the origin with centers on the x-axis.",
+    "prediction": "The first three terms in this series are equal to 2,486 and 1570 respectively. If the difference between these two is 390 then what will be it?",
+    "perplexity": 26.141374588012695,
+    "rouge1": 0.06477732793522267,
+    "rouge2": 0.0,
+    "rougeL": 0.048582995951417005,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 2,
+    "stage": "baseline",
+    "question": "In the Hindu-Arabic number system, each period has three values assigned to it. These values are the same for each period. From right to left, what are they?",
+    "reference": "Let's break down the structure of the Hindu-Arabic number system to understand the values assigned to each period.\n\n### Understanding the Hindu-Arabic Number System\nThe Hindu-Arabic number system is a positional (or place-value) system, which means the value of a digit depends on its position in the number. The system is organized into periods, which are groups of three digits separated by commas (or spaces in some cultures) for easier readability. \n\n### Structure of Periods\nEach period in the Hindu-Arabic number system consists of three place values. These place values are the same for every period, and they repeat from right to left. \n\nFrom right to left within each period, the three place values are:\n1. **Ones (or units)**\n2. **Tens**\n3. **Hundreds**\n\n### Example of Periods in a Number\nLet's take a large number to illustrate this: 123,456,789.\n\n- The rightmost period is \"789\":\n  - 9 is in the **ones** place.\n  - 8 is in the **tens** place.\n  - 7 is in the **hundreds** place.\n- The next period to the left is \"456\":\n  - 6 is in the **ones** place.\n  - 5 is in the **tens** place.\n  - 4 is in the **hundreds** place.\n- The leftmost period is \"123\":\n  - 3 is in the **ones** place.\n  - 2 is in the **tens** place.\n  - 1 is in the **hundreds** place.\n\n### Repeating Pattern\nNo matter how large the number, each period (except possibly the leftmost one, which might have fewer digits) has these three place values repeating in the same order: ones, tens, hundreds.\n\n### Final Answer\nFrom right to left, the three values assigned to each period in the Hindu-Arabic number system are:\n1. **Ones (units)**\n2. **Tens**\n3. **Hundreds**",
+    "prediction": "If you're a fan of the TV series \"The X Files\" and want something with more of an edge than your average sci fi show then give this book by Bill Bryson a read! This is one hilarious tale that will have even those who don't like science fiction laughing out loud as we follow the adventures of the 'X' team from the year 2059. The X-Files, a.k.a. The FBI's X-Ray Division is tasked with investigating all paranormal phenomena including UFO sightings or abductions where aliens come in contact with humans. Each case begins when an agent receives information about a supposedly abductee being taken away on some sort of craft and is then called upon to investigate their claims further using his or her supernatural powers. For example, agent Mulder uses hypnosis to help him gain insight into the situation while Agent Scul",
+    "perplexity": 11.215442657470703,
+    "rouge1": 0.17289719626168226,
+    "rouge2": 0.004694835680751174,
+    "rougeL": 0.09813084112149531,
+    "repetition_rate": 0.007
+  },
+  {
+    "index": 3,
+    "stage": "baseline",
+    "question": "What is the product formed when oxalic acid \\((\\text{COOH})_2\\) reacts with ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid?",
+    "reference": "The reaction between oxalic acid \\((\\text{COOH})_2\\) and ethylene glycol \\((\\text{CH}_2\\text{OH})_2\\) in the presence of concentrated sulfuric acid is an esterification reaction. The product is a cyclic ester (lactone), specifically **ethylene oxalate** (a 5-membered ring structure). The reaction proceeds as follows:\n\n1. The hydroxyl groups of ethylene glycol react with the carboxyl groups of oxalic acid, eliminating water molecules.\n2. The cyclic ester forms due to intramolecular esterification, facilitated by the concentrated sulfuric acid as a dehydrating agent.\n\nThe structure of the product is:\n\n\\[\n\\boxed{\\text{O} = \\text{C} - \\text{O} - \\text{CH}_2 - \\text{CH}_2 - \\text{O} - \\text{C} = \\text{O}}\n\\]",
+    "prediction": "\\text What does what the presence of concentruted sulferous acid in the presence of a presence of sulfur oxygen acid in the presence sulfate acid in the presence oxazine acid 10 in the presence oxidized sulforoxite acid 3) what oxilize acid? What is what the presence form what is it in the presence what's what the products that react to what's what happens when oxit what is what happens when oxle alchemy what are they what happens when alchemical oxymemacy what happened alchemy what is what happens during what does what the presence to what does what happen to what is what did what was what happens while what does what is what happens as if what is why what happens while what has what happens during what will happen what happens at how do you what happens when althule oxen what about what happens when what happens through what would have what happens while what would have what would be",
+    "perplexity": 18.2883243560791,
+    "rouge1": 0.21245421245421242,
+    "rouge2": 0.02952029520295203,
+    "rougeL": 0.13186813186813187,
+    "repetition_rate": 0.3938
+  },
+  {
+    "index": 4,
+    "stage": "baseline",
+    "question": "Can we conclude that patients with primary hypertension (PH), on the average, have higher total cholesterol levels than normotensive (NT) patients? The data consists of 133 PH patients and 41 NT patients. The significance level is \\( \\alpha = 0.05 \\).",
+    "reference": "To determine whether PH patients have higher total cholesterol levels than NT patients, we perform a two-sample \\( t \\)-test for the difference in means. Here are the steps:\n\n1. **State the hypotheses**:\n   - Null hypothesis (\\( H_0 \\)): The mean total cholesterol level of PH patients is equal to that of NT patients (\\( \\mu_{PH} = \\mu_{NT} \\)).\n   - Alternative hypothesis (\\( H_1 \\)): The mean total cholesterol level of PH patients is higher than that of NT patients (\\( \\mu_{PH} > \\mu_{NT} \\)).\n\n2. **Calculate the test statistic**:\n   - The test statistic for comparing two independent means is:\n     \\[\n     t = \\frac{\\bar{x}_{PH} - \\bar{x}_{NT}}{\\sqrt{\\frac{s_{PH}^2}{n_{PH}} + \\frac{s_{NT}^2}{n_{NT}}}}\n     \\]\n     where \\( \\bar{x}_{PH} \\) and \\( \\bar{x}_{NT} \\) are the sample means, \\( s_{PH} \\) and \\( s_{NT} \\) are the sample standard deviations, and \\( n_{PH} \\) and \\( n_{NT} \\) are the sample sizes.\n\n3. **Compare the test statistic to the critical value**:\n   - For a one-tailed test at \\( \\alpha = 0.05 \\), the critical \\( t \\)-value (with degrees of freedom approximated using the Welch-Satterthwaite equation) is approximately 1.66.\n   - If the calculated \\( t \\)-statistic is greater than 1.66, we reject the null hypothesis.\n\n4. **Conclusion**:\n   - The data provide sufficient evidence to conclude that PH patients have higher total cholesterol levels than NT patients (\\( t > 1.66 \\), \\( p < 0.05 \\)).\n\nThus, the answer is:  \n\\[\n\\boxed{\\text{Yes, the data provide sufficient evidence to conclude that PH patients have higher total cholesterol levels than NT patients at } \\alpha = 0.05.}\n\\]",
+    "prediction": "We are going to compare the results in order to find out whether there exists a significant difference between the patients with cholesterolemic, with cholelithiasis or without cholesteroemetic patients.\nThe patients with cholesteoroemboliatic patients on the average have higher levels for all patients with cholesterol embolism and cholestedemia (CHOE) than patients on the average with normo-cholestroteral (NCT) patients. The significance at 97% confidence interval \\( p < 0.02 \\) with \\( n= 68\\) patients.\nPatients with normocholesterolemia patients had significantly lower levels compared with patients with normal cholesterols (CNT) when comparing these two groups (Table 1).\nIn this study, we aimed at comparing the patients who suffer from cholestoenoemboliatic patients (CEPs), and",
+    "perplexity": 12.477705001831055,
+    "rouge1": 0.2541436464088398,
+    "rouge2": 0.016666666666666663,
+    "rougeL": 0.13812154696132595,
+    "repetition_rate": 0.0901
+  },
+  {
+    "index": 5,
+    "stage": "baseline",
+    "question": "What are the clinical, laboratory, and imaging diagnostic criteria for acute coronary syndrome (ACS)?",
+    "reference": "The diagnostic criteria for ACS include:\n1. **Clinical Criteria:**\n   - **History:** Location of pain (e.g., substernal), radiation of pain (e.g., to the arm or jaw), severity of pain, timing of pain (e.g., sudden onset), provoking/palliative actions (e.g., worsened by exertion, relieved by rest), and associated symptoms (e.g., diaphoresis, nausea).\n   - **Physical Examination:** Vital signs (e.g., tachycardia, hypotension), cardiac examination (e.g., murmurs, gallops), and signs of heart failure (e.g., jugular venous distension, rales).\n\n2. **Laboratory Criteria:**\n   - **Cardiac Markers:** Elevated troponin or creatine kinase-MB (CK-MB).\n   - **Other Tests:** Complete blood count (CBC), chemistry panel, and D-dimer (if pulmonary embolism is suspected).\n\n3. **Imaging Criteria:**\n   - **Electrocardiography (ECG):** ST-segment elevation (STEMI), ST-segment depression, or T-wave inversions (NSTEMI/unstable angina).\n   - **Chest X-ray:** May show pulmonary edema or other signs of heart failure.\n   - **Echocardiography:** Wall motion abnormalities or reduced ejection fraction.\n   - **Helical CT or Coronary Angiography:** For suspected aortic dissection or coronary artery occlusion.",
+    "prediction": "The clinical diagnostic criteria and ACS criteria are presented in Table 1. The ACS criteria were based on the consensus statement of the American College of Cardiology/American Heart Association Expert Panel to develop a classification system for ACS with a view towards improving patient care by enabling early diagnosis [6]. The clinical diagnostic criterion was developed from the ACC/AHA guidelines [7] as well as other available literature [8], which also has been used as reference standard [9\u201320]; however, the inclusion or exclusion criterions were based only upon clinically relevant factors that have been shown to be associated with adverse outcomes; hence, they did not include laboratory results. In addition, although some studies indicate that the clinician's knowledge of ACS is more than adequate if he or she is aware of ACS risk stratification methods such as the NSTEMI risk score",
+    "perplexity": 9.019752502441406,
+    "rouge1": 0.18360655737704917,
+    "rouge2": 0.0132013201320132,
+    "rougeL": 0.10491803278688523,
+    "repetition_rate": 0.036
+  },
+  {
+    "index": 6,
+    "stage": "baseline",
+    "question": "A 2 lb weight stretches a spring 0.32 ft. The weight is initially displaced 4 inches below equilibrium and given an upward velocity of 5 ft/sec. The medium provides damping with constant \\( c = \\frac{1}{8} \\) lb-sec/ft. Find the displacement \\( y(t) \\) for \\( t > 0 \\).",
+    "reference": "The displacement \\( y(t) \\) for \\( t > 0 \\) is given by:\n\\[\ny(t) = e^{-t} \\left( \\frac{1}{3} \\cos(3 \\sqrt{11} t) - \\frac{14}{9 \\sqrt{11}} \\sin(3 \\sqrt{11} t) \\right).\n\\]\nThis represents an underdamped oscillation with an exponentially decaying amplitude. The motion oscillates with a frequency of \\( 3 \\sqrt{11} \\) rad/sec and a damping factor of \\( e^{-t} \\). The initial conditions are satisfied, and the displacement approaches zero as \\( t \\to \\infty \\). \n\nFor graphing, the solution can be rewritten in amplitude-phase form as:\n\\[\ny(t) = A e^{-t} \\cos(3 \\sqrt{11} t - \\phi),\n\\]\nwhere \\( A = \\sqrt{\\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{14}{9 \\sqrt{11}}\\right)^2} \\) and \\( \\phi = \\tan^{-1}\\left(\\frac{14}{3 \\sqrt{11}}\\right) \\). \n\nThe graph would show a decaying oscillation starting from \\( y(0) = \\frac{1}{3} \\) ft with an initial upward velocity of 5 ft/sec. The envelope of the oscillation decays as \\( e^{-t} \\). \n\n\\[\n\\boxed{y(t) = e^{-t} \\left( \\frac{1}{3} \\cos(3 \\sqrt{11} t) - \\frac{14}{9 \\sqrt{11}} \\sin(3 \\sqrt{11} t) \\right)}\n\\]",
+    "prediction": "Example: The weight of a 6 inch sphere at rest is initially distributed equally over its surface area (Figure \\(\\PageIndex{a}\\)). The sphere moves along with an initial speed v. After one revolution, it has moved by 7 cm. Find how long this motion will continue before coming to stop.",
+    "perplexity": 133.86241149902344,
+    "rouge1": 0.11864406779661019,
+    "rouge2": 0.017094017094017096,
+    "rougeL": 0.07627118644067796,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 7,
+    "stage": "baseline",
+    "question": "Prove that the complex series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) diverges, where \\( i \\) is the imaginary unit.",
+    "reference": "To prove the divergence of the series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\), we analyze the magnitude of its terms.  \n\n1. **Magnitude of Terms**:  \n   The general term of the series is \\( \\frac{1}{n^{1+i}} = \\frac{1}{n} \\cdot n^{-i} \\).  \n   The magnitude of \\( n^{-i} \\) is \\( |n^{-i}| = |e^{-i \\ln n}| = 1 \\), since \\( e^{-i \\ln n} \\) lies on the unit circle.  \n   Thus, the magnitude of the term is \\( \\left| \\frac{1}{n^{1+i}} \\right| = \\frac{1}{n} \\).  \n\n2. **Comparison to Harmonic Series**:  \n   The series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n} \\) is the harmonic series, which is known to diverge.  \n   Since the magnitude of the terms of \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) matches the harmonic series, the original series cannot converge absolutely.  \n\n3. **Conclusion**:  \n   If the series were convergent, the magnitudes of its terms would have to tend to zero in a way that allows the partial sums to converge. However, the magnitudes \\( \\frac{1}{n} \\) do not decrease fast enough to ensure convergence.  \n   Therefore, the series \\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\) diverges.  \n\n   \\(\\boxed{\\text{The series } \\sum_{n=1}^{\\infty} \\frac{1}{n^{1+i}} \\text{ diverges.}}\\)",
+    "prediction": "\\(\\alpha\\) is a positive real number called the \\emph {complex constant}.\nThe \\textquotedblleft complex conjugate\" of an expression \\( x^{\\mu}\\), for example , is its opposite in sign and denoted by \\(\\bar{x}_{\\mu}\\) (or sometimes written as \\\\(\\overline{x}_\\mu\\)).\n\\(A_\\nu + B_{\\nu}=2a_0^3 C^{-1}_{ab}(B^\\rho - 4a_0^5C^{-1})T^{(7)}_{(abc)d-bde}(\\tau,\\sigma)\\)\n\\(D = [I + (\\gamma/8)(E^+)^2](E^-)^{-1})\\nonumber\\)\n\\(L=\\Gamma[-\\ln(z)]+\\ln z/(2\\pi i)+\\int dz dq\\,e^{-\\beta H}/[z]\\Phi'(|p|^2/\\lambda)-...\\).\\\\\nWe note",
+    "perplexity": 19.078887939453125,
+    "rouge1": 0.13422818791946306,
+    "rouge2": 0.0,
+    "rougeL": 0.087248322147651,
+    "repetition_rate": 0.0
+  },
+  {
+    "index": 8,
+    "stage": "baseline",
+    "question": "Given the scarcity of organs for transplantation, should patients with certain lifestyle choices (e.g., substance abuse, poor diet) or preexisting conditions be prioritized for transplants or other medical interventions? How do ethical principles like distributive justice, medical necessity, and respect for dignity inform this decision?",
+    "reference": "Ethical principles suggest that patients should not be unfairly penalized for lifestyle choices or preexisting conditions. However, the allocation of scarce resources like organs for transplantation requires careful prioritization based on medical necessity and the likelihood of successful treatment. Key considerations include:  \n\n1. **Distributive Justice**: Organs should be allocated fairly, without discrimination based on socioeconomic status or health habits. However, factors like the recipient\u2019s age, overall health, and the probable viability of the transplant may be ethically justifiable criteria for prioritization.  \n2. **Medical Necessity**: Patients with urgent needs and higher chances of long-term survival should be prioritized to maximize the benefit of limited resources.  \n3. **Avoidance of Harm**: Prioritizing patients who are more likely to adhere to post-transplant care (e.g., avoiding substance abuse) can reduce the risk of organ rejection and wasted resources.  \n4. **Respect for Dignity**: While patients with self-inflicted conditions (e.g., alcohol-related liver disease) should not be automatically excluded, their ability to comply with treatment plans may be a relevant factor in allocation decisions.  \n\nUltimately, the decision should balance fairness, medical efficacy, and the ethical obligation to use scarce resources responsibly. $\\boxed{\\text{Ethical allocation should prioritize medical necessity and likelihood of success, while avoiding unjust discrimination based on lifestyle or preexisting conditions.}}$",
+    "prediction": "A second major challenge in organ allocation is the shortage of donor hearts and kidneys. This is especially acute among adults who are not yet on the waiting list due to their age: In 2017, an estimated 869,435 people were awaiting a heart transplant; by contrast there was only enough supply available to treat about half that number.[vi]\nThe current system has several potential weaknesses when it comes to this problem. First, there's no clear standardization across healthcare systems as to how many organs each patient would receive if they received one. Secondly, there aren't any guidelines around what organs will become \"transferable\" so those organ recipients can wait longer than others because their organs won't qualify under another criteria.[viii],[ix] Third, the current system doesn't have a way to quantifiably determine whether some organs",
+    "perplexity": 14.512297630310059,
+    "rouge1": 0.16949152542372878,
+    "rouge2": 0.005681818181818182,
+    "rougeL": 0.0903954802259887,
+    "repetition_rate": 0.015
+  },
+  {
+    "index": 9,
+    "stage": "baseline",
+    "question": "During which interval on the ECG does the bundle of His depolarize?",
+    "reference": "The bundle of His depolarizes during the **PR interval** (represented by point C on the ECG). This interval includes the time from atrial depolarization (P wave) to the start of ventricular depolarization (QRS complex), during which the action potential passes through the AV node and the bundle of His. Thus, the correct answer is $\\boxed{C}$.",
+    "prediction": "Is this a question mark? What does it say? It says the same, but it also says the same thing. The same as me, I'm so happy! I've been in this place for about 10 years now and still going strong. I'd like to thank all my friends that have supported me through these tough times with a heartfelt thank you from one of them: \"My goodness is it really so wonderful?\" But don't take out your chinchair just yet because we haven't even begun\u2026\nThe new album has already been played live many times since its release; so far there are 24 songs (not including the title track) that we can play without having to look at each other or saying anything. We will soon be playing the new songs again and we hope everyone enjoys our performances once more. This time around, however, they will not only include the latest single, but also new songs such",
+    "perplexity": 13.535449028015137,
+    "rouge1": 0.14611872146118723,
+    "rouge2": 0.009216589861751152,
+    "rougeL": 0.1004566210045662,
+    "repetition_rate": 0.0255
+  }
+]
