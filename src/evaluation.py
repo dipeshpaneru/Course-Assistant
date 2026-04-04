@@ -102,15 +102,12 @@ class Evaluation:
         print("="*60)
 
         sample_indices = [0] 
-        human_scores = []
 
         for i in sample_indices:
             item = results[i]
-            print(item)
             scores = self.human_eval_rubric(item["prediction"], item["question"])
-            human_scores.append(scores)
-    
-        results[i]["human_eval"] = scores
+            results[i]["human_eval"] = scores
+
         return results
 
 
@@ -171,6 +168,10 @@ class Evaluation:
         
     def compute_averages(self, results):
         n = len(results)
+
+        human_eval_items = [r for r in results if "human_eval" in r]
+        hn = len(human_eval_items)
+        
         summary = {
             "stage":          "baseline",
             "num_examples":   n,
@@ -180,7 +181,7 @@ class Evaluation:
             "avg_rougeL":     round(sum(r["rougeL"]          for r in results) / n, 4),
             "avg_repetition": round(sum(r["repetition_rate"] for r in results) / n, 4),
             "avg_question_count": round(sum(r["question_count"] for r in results) / n, 2),
-            "avg_human_eval": round(sum(r["human_eval"] for r in results) / n, 2)
+            "avg_human_eval": round(sum(r["human_eval"] for r in human_eval_items) / hn, 2)
         }
 
         print("\n📊 Baseline Evaluation Summary")
