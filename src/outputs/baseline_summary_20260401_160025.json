@@ -1,9 +1,0 @@
-{
-  "stage": "baseline",
-  "num_examples": 100,
-  "avg_perplexity": NaN,
-  "avg_rouge1": 0.1634,
-  "avg_rouge2": 0.0175,
-  "avg_rougeL": 0.0959,
-  "avg_repetition": 0.0454
-}

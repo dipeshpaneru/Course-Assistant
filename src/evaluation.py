@@ -4,10 +4,12 @@ import re
 import torch
 import numpy as np
 from rouge_score import rouge_scorer
+import builtins
 
 
 class Evaluation:
 
+    rep_rate_higher_than_threshold = 0
 
     def collect_outputs(self, model, tokenizer, test_set, stage_name="base"):
         results = []
@@ -42,26 +44,46 @@ class Evaluation:
     
 
 
-    def compute_perplexity(self, model, tokenizer, texts):
+    def compute_perplexity(self, model, tokenizer, texts, batch_size=1):
         model.eval()
         
-        total_loss = 0
-        count = 0
+        total_loss = 0.0
+        total_tokens = 0
         
         with torch.no_grad():
-            for text in texts:
-                inputs = tokenizer(text, return_tensors="pt").to(model.device)
-                outputs = model(**inputs, labels=inputs["input_ids"])
-                loss = outputs.loss
+            for i in range(0, len(texts), batch_size):
+                batch = texts[i:i + batch_size]
+                
+                inputs = tokenizer(
+                    batch,
+                    return_tensors="pt",
+                    padding=True,
+                    truncation=True
+                ).to(model.device)
+                
+                labels = inputs["input_ids"].clone()
+                
+                # Ignore padding tokens in loss
+                if tokenizer.pad_token_id is not None:
+                    labels[labels == tokenizer.pad_token_id] = -100
+                
+                outputs = model(**inputs, labels=labels)
+                loss = outputs.loss  # mean loss per token
                 
                 if not torch.isnan(loss) and not torch.isinf(loss):
-                    total_loss += loss.item()
-                    count += 1
+                    # Count valid (non-masked) tokens
+                    num_tokens = (labels != -100).sum().item()
+                    
+                    total_loss += loss.item() * num_tokens
+                    total_tokens += num_tokens
         
-        if count == 0:
+        if total_tokens == 0:
             return float("nan")
         
-        return torch.exp(torch.tensor(total_loss / count)).item()
+        avg_loss = total_loss / total_tokens
+        perplexity = torch.exp(torch.tensor(avg_loss)).item()
+    
+        return perplexity
 
 
 
@@ -87,13 +109,35 @@ class Evaluation:
         total  = len(ngrams)
         unique = len(set(ngrams))
 
-        return round(1 - (unique / total), 4)
+        repetion_rate = round(1 - (unique / total), 4)
+
+        if repetion_rate > 0.15:
+            self.rep_rate_higher_than_threshold +=1
+        
+        return repetion_rate
     
+
     def count_questions_in_output(self, text):
-        sentences = text.split("?")
-        question_count = len(sentences) - 1  # number of "?" found
-        return question_count
-    
+        # Method 1: count explicit question marks
+        explicit_questions = text.count("?")
+        
+        # Method 2: count sentences starting with question words
+        question_starters = r'\b(what|where|when|who|why|how|which|whose|whom|is|are|was|were|do|does|did|can|could|would|should|will|has|have|had)\b'
+        
+        # Split into sentences by . ! ? and newlines
+        sentences = re.split(r'[.!?\n]+', text)
+        
+        implicit_questions = 0
+        for sentence in sentences:
+            sentence = sentence.strip()
+            if sentence and re.match(question_starters, sentence, re.IGNORECASE):
+                # Only count if it doesn't already have a ? (avoid double counting)
+                if not sentence.endswith("?"):
+                    implicit_questions += 1
+        
+        total = explicit_questions + implicit_questions
+        return total
+        
 
     def human_eval(self, results):
 
@@ -101,7 +145,7 @@ class Evaluation:
         print("HUMAN EVALUATION - Sample of 15 examples")
         print("="*60)
 
-        sample_indices = [0] 
+        sample_indices = [0, 3, 13, 15, 17, 19, 55, 67, 92, 123, 124, 155, 167, 169, 190] 
 
         for i in sample_indices:
             item = results[i]
@@ -126,7 +170,7 @@ class Evaluation:
 
         scores = {}
         for dimension in ["Relevance", "Correctness", "Coherence", "Fluency"]:
-            score = int(input(f"  {dimension} (1-5): "))
+            score = int(builtins.input(f"{dimension} (1-5): "))
             scores[dimension] = score
 
         scores["average"] = round(sum(scores.values()) / len(scores), 2)
@@ -180,8 +224,9 @@ class Evaluation:
             "avg_rouge2":     round(sum(r["rouge2"]          for r in results) / n, 4),
             "avg_rougeL":     round(sum(r["rougeL"]          for r in results) / n, 4),
             "avg_repetition": round(sum(r["repetition_rate"] for r in results) / n, 4),
+            "repetion_rate_higher_than_threshold": self.rep_rate_higher_than_threshold,
             "avg_question_count": round(sum(r["question_count"] for r in results) / n, 2),
-            "avg_human_eval": round(sum(r["human_eval"] for r in human_eval_items) / hn, 2)
+            "avg_human_eval": round(sum(r["human_eval"]["average"] for r in human_eval_items) / hn, 2)
         }
 
         print("\n📊 Baseline Evaluation Summary")
@@ -190,6 +235,7 @@ class Evaluation:
         print(f"  ROUGE-2:         {summary['avg_rouge2']}")
         print(f"  ROUGE-L:         {summary['avg_rougeL']}")
         print(f"  Repetition Rate: {summary['avg_repetition']}")
+        print(f"  Repetition Rate higher than 1.5: {self.rep_rate_higher_than_threshold}")
         print(f"  Question Count:  {summary['avg_question_count']}")
         print(f"  Human Evaluation:  {summary['avg_human_eval']}")
 

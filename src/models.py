@@ -5,6 +5,7 @@ def get_base_model():
     model_name = "TinyLlama/TinyLlama_v1.1"  # base version
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer.pad_token = tokenizer.eos_token
     
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
