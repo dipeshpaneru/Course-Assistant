@@ -63,15 +63,13 @@ class Evaluation:
                 
                 labels = inputs["input_ids"].clone()
                 
-                # Ignore padding tokens in loss
                 if tokenizer.pad_token_id is not None:
                     labels[labels == tokenizer.pad_token_id] = -100
                 
                 outputs = model(**inputs, labels=labels)
-                loss = outputs.loss  # mean loss per token
+                loss = outputs.loss  
                 
                 if not torch.isnan(loss) and not torch.isinf(loss):
-                    # Count valid (non-masked) tokens
                     num_tokens = (labels != -100).sum().item()
                     
                     total_loss += loss.item() * num_tokens
@@ -118,20 +116,16 @@ class Evaluation:
     
 
     def count_questions_in_output(self, text):
-        # Method 1: count explicit question marks
         explicit_questions = text.count("?")
         
-        # Method 2: count sentences starting with question words
         question_starters = r'\b(what|where|when|who|why|how|which|whose|whom|is|are|was|were|do|does|did|can|could|would|should|will|has|have|had)\b'
         
-        # Split into sentences by . ! ? and newlines
         sentences = re.split(r'[.!?\n]+', text)
         
         implicit_questions = 0
         for sentence in sentences:
             sentence = sentence.strip()
             if sentence and re.match(question_starters, sentence, re.IGNORECASE):
-                # Only count if it doesn't already have a ? (avoid double counting)
                 if not sentence.endswith("?"):
                     implicit_questions += 1
         
@@ -240,18 +234,3 @@ class Evaluation:
         print(f"  Human Evaluation:  {summary['avg_human_eval']}")
 
         return summary
-
-
-
-
-
-
-# To run the code above 
-
-# from src.evaluate import evaluate_all, human_eval_rubric
-
-# # Automated metrics
-# results = evaluate_all(model, tokenizer, question, prediction, reference)
-
-# # Human rubric (run separately, requires manual input)
-# human_scores = human_eval_rubric(model_output, question)
