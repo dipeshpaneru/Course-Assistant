@@ -77,7 +77,7 @@ def save_finetune_logs(metrics):
 
 
 
-def main():
+def run_finetuning():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(ADAPTER_DIR, exist_ok=True)
 
@@ -181,9 +181,6 @@ def main():
     print(f"  Train loss : {metrics.get('train_loss', 'N/A'):.4f}")
     print(f"  Runtime    : {metrics.get('train_runtime', 0) / 60:.1f} min")
 
-
-if __name__ == "__main__":
-    main()
 
 
 # ─────────────────────────────────────────────
