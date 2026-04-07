@@ -8,35 +8,27 @@ from peft import LoraConfig, get_peft_model, TaskType
 from trl import SFTTrainer
 
 
-# ─────────────────────────────────────────────
-# Config
-# ─────────────────────────────────────────────
+MODEL_NAME = "TinyLlama/TinyLlama_v1.1"
+BASE_DIR = "/content/Course-Assistant"
+TRAIN_PATH = BASE_DIR + "/data/train"
+VAL_PATH = BASE_DIR + "/data/val"
+OUTPUT_DIR = BASE_DIR + "/outputs/qlora"
+ADAPTER_DIR = BASE_DIR + "/outputs/qlora/final_adapter"
+OFFLOAD_DIR = BASE_DIR + "/offload"
 
-MODEL_NAME    = "TinyLlama/TinyLlama_v1.1"
-TRAIN_PATH    = "../data/train"
-VAL_PATH      = "../data/val"
-OUTPUT_DIR    = "../outputs/qlora"
-ADAPTER_DIR   = "../outputs/qlora/final_adapter"
-
-MAX_SEQ_LEN   = 512
-BATCH_SIZE    = 4
-GRAD_ACCUM    = 4          # effective batch size = 4 * 4 = 16
-EPOCHS        = 3
+MAX_SEQ_LEN = 512
+BATCH_SIZE = 4
+GRAD_ACCUM = 4         
+EPOCHS = 3
 LEARNING_RATE = 2e-4
-SEED          = 42
+SEED = 42
 
 # LoRA
-LORA_R        = 16
-LORA_ALPHA    = 32
-LORA_DROPOUT  = 0.05
-LORA_TARGETS  = ["q_proj", "v_proj", "k_proj", "o_proj"]
+LORA_R = 16
+LORA_ALPHA = 32
+LORA_DROPOUT = 0.05
+LORA_TARGETS = ["q_proj", "v_proj", "k_proj", "o_proj"]
 
-
-# ─────────────────────────────────────────────
-# Prompt formatting
-# Uses the same columns from your dataset:
-# 'question', 'answer', 'subject', 'reference_answer'
-# ─────────────────────────────────────────────
 
 def format_prompt(example):
     prompt = (
@@ -46,36 +38,55 @@ def format_prompt(example):
     return {"text": prompt}
 
 
+def get_model_for_finetuning():
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+    )
 
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tokenizer.pad_token = tokenizer.eos_token  
+    tokenizer.padding_side = "right"
 
-# ─────────────────────────────────────────────
-# Save fine-tuning logs
-# Mirrors your save_logs() in utilities.py
-# ─────────────────────────────────────────────
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        quantization_config=bnb_config,
+        device_map="auto",
+        offload_folder=OFFLOAD_DIR             
+    )
+    model.config.use_cache = False            
+    model.config.pretraining_tp = 1
+
+    print("Model loaded for fine-tuning!")
+    print(f"Device: {next(model.parameters()).device}")
+
+    return model, tokenizer
+
 
 def save_finetune_logs(metrics):
-    os.makedirs("../outputs", exist_ok=True)
+    os.makedirs(BASE_DIR + "/outputs", exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    path = f"../outputs/finetuning_metrics_{timestamp}.json"
+    path = BASE_DIR + f"/outputs/finetuning_metrics_{timestamp}.json"
     with open(path, "w") as f:
         json.dump(metrics, f, indent=2)
 
     print(f"\n✅ Fine-tuning logs saved to outputs/")
 
 
-# ─────────────────────────────────────────────
-# Main
-# ─────────────────────────────────────────────
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(ADAPTER_DIR, exist_ok=True)
 
-    # ── 1. Load datasets ─────────────────────────────────────────
     print("Loading datasets...")
     train_dataset = load_from_disk(TRAIN_PATH)
     val_dataset   = load_from_disk(VAL_PATH)
+
+    train_dataset = train_dataset.select(range(10_000))
+    val_dataset   = val_dataset.select(range(1_000))
 
     print(f"  Train : {len(train_dataset):,} examples")
     print(f"  Val   : {len(val_dataset):,} examples")
@@ -99,7 +110,7 @@ def main():
         task_type=TaskType.CAUSAL_LM,
     )
     model = get_peft_model(model, lora_config)
-    model.print_trainable_parameters()   # expect ~0.5-1% of params
+    model.print_trainable_parameters() 
 
     # ── 4. Training arguments ─────────────────────────────────────
     training_args = TrainingArguments(

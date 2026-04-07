@@ -6,7 +6,7 @@
   "avg_rouge2": 0.0162,
   "avg_rougeL": 0.0876,
   "avg_repetition": 0.0403,
-  "repetion_rate_higher_than_threshold": 15,
+  "repetion_rate_higher_than_threshold": 27,
   "avg_question_count": 2.22,
   "avg_human_eval": 1.32
 }
