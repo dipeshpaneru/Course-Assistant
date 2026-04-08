@@ -1,0 +1,12 @@
+{
+  "stage": "finetuned",
+  "num_examples": 200,
+  "avg_perplexity": 2.28,
+  "avg_rouge1": 0.1552,
+  "avg_rouge2": 0.0104,
+  "avg_rougeL": 0.0853,
+  "avg_repetition": 0.0091,
+  "repetion_rate_higher_than_threshold": 0,
+  "avg_question_count": 1.9,
+  "avg_human_eval": 3.0
+}
