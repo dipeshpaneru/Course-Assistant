@@ -85,9 +85,6 @@ def run_finetuning():
     train_dataset = load_from_disk(TRAIN_PATH)
     val_dataset   = load_from_disk(VAL_PATH)
 
-    train_dataset = train_dataset.select(range(10_000))
-    val_dataset   = val_dataset.select(range(1_000))
-
     print(f"  Train : {len(train_dataset):,} examples")
     print(f"  Val   : {len(val_dataset):,} examples")
     print(f"  Columns: {train_dataset.column_names}")
