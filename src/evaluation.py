@@ -12,10 +12,25 @@ class Evaluation:
     rep_rate_higher_than_threshold = 0
 
     def collect_outputs(self, model, tokenizer, test_set, stage_name="base"):
+        from tqdm import tqdm
         results = []
+        batch_size = 8
 
-        for item in test_set:
-            inputs = tokenizer(item["question"], return_tensors="pt").to(model.device)
+        for i in tqdm(range(0, len(test_set), batch_size), desc=f"Collecting {stage_name}"):
+            batch = test_set[i:i + batch_size]
+
+            if stage_name == "finetuned":
+                prompts = [f"### Question:\n{q.strip()}\n\n### Answer:\n" for q in batch["question"]]
+            else:
+                prompts = batch["question"]
+
+            inputs = tokenizer(
+                prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=512
+            ).to(model.device)
 
             with torch.no_grad():
                 outputs = model.generate(
@@ -28,17 +43,19 @@ class Evaluation:
                     no_repeat_ngram_size=5,
                 )
 
-            response = tokenizer.decode(
-                outputs[0][inputs["input_ids"].shape[1]:],
-                skip_special_tokens=True
-            ).strip()
+            for j in range(len(batch["question"])):
+                input_len = inputs["input_ids"].shape[1]
+                response = tokenizer.decode(
+                    outputs[j][input_len:],
+                    skip_special_tokens=True
+                ).strip()
 
-            results.append({
-                "stage":     stage_name,
-                "question":  item["question"],
-                "reference": item["answer"],
-                "output":    response,
-            })
+                results.append({
+                    "stage":     stage_name,
+                    "question":  batch["question"][j],
+                    "reference": batch["answer"][j],
+                    "output":    response,
+                })
 
         return results
     
