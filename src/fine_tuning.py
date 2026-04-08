@@ -12,8 +12,8 @@ MODEL_NAME = "TinyLlama/TinyLlama_v1.1"
 BASE_DIR = "/content/Course-Assistant"
 TRAIN_PATH = BASE_DIR + "/data/train"
 VAL_PATH = BASE_DIR + "/data/val"
-OUTPUT_DIR = BASE_DIR + "/outputs/qlora"
-ADAPTER_DIR = BASE_DIR + "/outputs/qlora/final_adapter"
+OUTPUT_DIR = "/content/drive/MyDrive/Course-Assistant/outputs/qlora"
+ADAPTER_DIR = "/content/drive/MyDrive/Course-Assistant/outputs/qlora/final_adapter"
 OFFLOAD_DIR = BASE_DIR + "/offload"
 
 MAX_SEQ_LEN = 512
@@ -182,6 +182,7 @@ def run_finetuning():
     print(f"  Runtime    : {metrics.get('train_runtime', 0) / 60:.1f} min")
 
 
+run_finetuning()
 
 # ─────────────────────────────────────────────
 # To load the fine-tuned model for evaluation:
