@@ -152,13 +152,13 @@ def run_finetuning():
 
     # ── 5. Trainer ────────────────────────────────────────────────
     trainer = SFTTrainer(
-    model=model,
-    args=training_args,
-    train_dataset=train_dataset,
-    eval_dataset=val_dataset,
-    dataset_text_field="text",
-    max_seq_length=MAX_SEQ_LEN,
-    packing=False,
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset,
+        eval_dataset=val_dataset,
+        dataset_text_field="text",
+        max_seq_length=MAX_SEQ_LEN,
+        packing=False,
     )
 
     # ── 6. Train ──────────────────────────────────────────────────
