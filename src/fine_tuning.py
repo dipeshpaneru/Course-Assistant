@@ -155,6 +155,7 @@ def run_finetuning():
         model=model,
         args=training_args,
         train_dataset=train_dataset,
+        processing_class=tokenizer,
         eval_dataset=val_dataset,
         dataset_text_field="text",
         max_seq_length=MAX_SEQ_LEN,
