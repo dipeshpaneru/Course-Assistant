@@ -11,41 +11,41 @@ class Evaluation:
 
     rep_rate_higher_than_threshold = 0
 
-def collect_outputs(self, model, tokenizer, test_set, stage_name="base"):
-    results = []
+    def collect_outputs(self, model, tokenizer, test_set, stage_name="base"):
+        results = []
 
-    for item in test_set:
-        if stage_name == "finetuned":
-            prompt = f"### Question:\n{item['question'].strip()}\n\n### Answer:\n"
-        else:
-            prompt = item["question"]
+        for item in test_set:
+            if stage_name == "finetuned":
+                prompt = f"### Question:\n{item['question'].strip()}\n\n### Answer:\n"
+            else:
+                prompt = item["question"]
 
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+            inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-        with torch.no_grad():
-            outputs = model.generate(
-                **inputs,
-                max_new_tokens=200,
-                do_sample=True,
-                temperature=0.7,
-                top_p=0.9,
-                repetition_penalty=1.3,
-                no_repeat_ngram_size=5,
-            )
+            with torch.no_grad():
+                outputs = model.generate(
+                    **inputs,
+                    max_new_tokens=200,
+                    do_sample=True,
+                    temperature=0.7,
+                    top_p=0.9,
+                    repetition_penalty=1.3,
+                    no_repeat_ngram_size=5,
+                )
 
-        response = tokenizer.decode(
-            outputs[0][inputs["input_ids"].shape[1]:],
-            skip_special_tokens=True
-        ).strip()
+            response = tokenizer.decode(
+                outputs[0][inputs["input_ids"].shape[1]:],
+                skip_special_tokens=True
+            ).strip()
 
-        results.append({
-            "stage":     stage_name,
-            "question":  item["question"],
-            "reference": item["answer"],
-            "output":    response,
-        })
+            results.append({
+                "stage":     stage_name,
+                "question":  item["question"],
+                "reference": item["answer"],
+                "output":    response,
+            })
 
-    return results
+        return results
     
 
 
