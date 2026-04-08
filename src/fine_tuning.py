@@ -128,7 +128,7 @@ def run_finetuning():
         learning_rate=LEARNING_RATE,
         weight_decay=0.001,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.03,
+        warmup_steps=50,
         max_grad_norm=0.3,
 
         # logging & saving
@@ -156,7 +156,7 @@ def run_finetuning():
     args=training_args,
     train_dataset=train_dataset,
     eval_dataset=val_dataset,
-    tokenizer=tokenizer,
+    processing_class=tokenizer,
     dataset_text_field="text",
     max_seq_length=MAX_SEQ_LEN,
     packing=False,
