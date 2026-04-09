@@ -3,4 +3,4 @@ venv
 data
 offload
 adapter/
-
+chroma_db/
