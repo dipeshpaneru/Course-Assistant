@@ -5,6 +5,7 @@ import torch
 import numpy as np
 from rouge_score import rouge_scorer
 import builtins
+from rag import RAG
 
 
 class Evaluation:
@@ -17,6 +18,15 @@ class Evaluation:
         for item in test_set:
             if stage_name == "finetuned":
                 prompt = f"### Question:\n{item['question'].strip()}\n\n### Answer:\n"
+            elif stage_name == "rag":
+                self.rag = RAG()
+                context = self.rag.get_context(item['question'], top_k=self.top_k)
+
+                prompt = (
+                    f"### Context:\n{item['context']}\n\n"
+                    f"### Question:\n{item['question'].strip()}\n\n"
+                    f"### Answer:\n"
+                )
             else:
                 prompt = item["question"]
 
