@@ -1,0 +1,12 @@
+{
+  "stage": "RAG",
+  "num_examples": 200,
+  "avg_perplexity": 6.51,
+  "avg_rouge1": 0.1632,
+  "avg_rouge2": 0.0202,
+  "avg_rougeL": 0.0974,
+  "avg_repetition": 0.0113,
+  "repetion_rate_higher_than_threshold": 0,
+  "avg_question_count": 0.39,
+  "avg_human_eval": 2.57
+}

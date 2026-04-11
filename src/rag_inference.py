@@ -53,7 +53,7 @@ class RAGInference:
        
         results = []
 
-        for item in tqdm(test_set, desc=f"Collecting {stage_name}"):
+        for item in tqdm(test_set, desc=f"Collecting outputs"):
             response = self.generate(item["question"])
 
             results.append({

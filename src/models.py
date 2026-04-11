@@ -1,6 +1,9 @@
+import os
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import PeftModel
 import torch
+import os
 
 MODEL_NAME = "TinyLlama/TinyLlama_v1.1"
 
@@ -24,22 +27,17 @@ def get_base_model():
 
 def get_fine_tuned_model():
 
-    # ADAPTER_DIR is the path of the adapter in Google Drive. Used in Google Colab.
-    ADAPTER_DIR = "/content/drive/MyDrive/Course-Assistant/outputs/qlora/final_adapter"
+    ADAPTER_DIR = os.path.join(os.path.dirname(__file__), '..', 'adapter', 'final_adapter')
 
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-    )
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tokenizer.pad_token = tokenizer.eos_token
 
     base = AutoModelForCausalLM.from_pretrained(
-        "TinyLlama/TinyLlama_v1.1",
-        quantization_config=bnb_config,
-        device_map="auto",
+        MODEL_NAME,
+        torch_dtype=torch.float16,
+        local_files_only=True,
     )
 
-    ft_model  = PeftModel.from_pretrained(base, ADAPTER_DIR)
-    ft_tokenizer = AutoTokenizer.from_pretrained(ADAPTER_DIR)
-    
-    return ft_model, ft_tokenizer
+    model = PeftModel.from_pretrained(base, ADAPTER_DIR)
+
+    return model, tokenizer

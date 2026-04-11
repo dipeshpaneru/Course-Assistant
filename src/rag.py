@@ -7,7 +7,7 @@ from tqdm import tqdm
 import pypdf
 
 
-CHROMA_PATH   = "../data/chroma_db"
+CHROMA_PATH   = os.path.join(os.path.dirname(__file__), '..', 'data', 'chroma_db')
 COLLECTION    = "Course_Assistant"
 EMBED_MODEL   = "all-MiniLM-L6-v2" 
 BATCH_SIZE    = 500
