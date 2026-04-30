@@ -48,7 +48,8 @@ class RAG:
 
 
     def add_pdf(self, pdf_path):
-        #This funciton is specifically for adding PDFs to the RAG store.  
+        #This funciton is specifically for adding PDFs to the RAG store. 
+        #  
         filename = os.path.basename(pdf_path)
        
         reader = pypdf.PdfReader(pdf_path)
@@ -88,11 +89,22 @@ class RAG:
 
     def retrieve(self, query, top_k=3):
         query_embedding = self.embedder.encode([query]).tolist()
-        results = self.collection.query(
-            query_embeddings = query_embedding,
-            n_results        = top_k
+        
+        pdf_results = self.collection.query(
+            query_embeddings=query_embedding,
+            n_results=top_k,
+            where={"source": "pdf"}  #Check the documents from the PDF first.
         )
-        return results["documents"][0]  # list of top-k strings
+        
+        if pdf_results["documents"][0]:
+            return pdf_results["documents"][0]
+        
+        # Fallback to general retrieval if no relevant PDF chunks found
+        results = self.collection.query(
+            query_embeddings=query_embedding,
+            n_results=top_k
+        )
+        return results["documents"][0] 
 
 
     def get_context(self, query, top_k=3):

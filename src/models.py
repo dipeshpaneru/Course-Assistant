@@ -14,9 +14,9 @@ def get_base_model():
     
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        dtype=torch.float16,   
+        torch_dtype=torch.float16,   
         device_map="auto",
-        offload_folder="../offload"        
+        local_files_only=True,       
     )
 
     print("Model loaded!")
@@ -39,5 +39,25 @@ def get_fine_tuned_model():
     )
 
     model = PeftModel.from_pretrained(base, ADAPTER_DIR)
+
+    return model, tokenizer
+
+
+
+
+def get_phi_2_model():
+    MODEL_NAME = "microsoft/phi-2"
+
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    tokenizer.pad_token = tokenizer.eos_token
+
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        torch_dtype=torch.float16,
+        local_files_only=False,  # needs to download first time
+    )
+
+    print("✅ Phi-2 model loaded!")
+    print(f"Device: {next(model.parameters()).device}")
 
     return model, tokenizer

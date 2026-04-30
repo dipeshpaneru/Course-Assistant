@@ -1,11 +1,13 @@
 import sys
 import gradio as gr
-from models import get_fine_tuned_model
+from models import get_fine_tuned_model, get_base_model, get_phi_2_model
 from rag import RAG
 from rag_inference import RAGInference
 
 
 model, tokenizer = get_fine_tuned_model()
+# model, tokenizer = get_base_model()
+# model, tokenizer = get_phi_2_model()
 rag = RAG()
 rag_model = RAGInference(model, tokenizer, rag)
 
