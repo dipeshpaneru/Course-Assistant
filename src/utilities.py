@@ -41,6 +41,7 @@ def split_dataset():
 
 def retrieve_datasets():
     
+    #Retrive the loaded datasets
     dataset = load_from_disk("../data/textbook_reasoning")
     train_dataset = load_from_disk('../data/train')
     val_dataset = load_from_disk('../data/val')
@@ -50,7 +51,7 @@ def retrieve_datasets():
 
 
 def save_logs(version, full_results, summary):
-
+    # Make directorys and store the results in outputs folder
     os.makedirs('../outputs', exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 

@@ -92,15 +92,13 @@ def run_finetuning():
     print(f"  Val   : {len(val_dataset):,} examples")
     print(f"  Columns: {train_dataset.column_names}")
 
-    # Format into instruction prompts, drop unused columns
     train_dataset = train_dataset.map(format_prompt, remove_columns=train_dataset.column_names)
     val_dataset   = val_dataset.map(format_prompt,   remove_columns=val_dataset.column_names)
     print("  Prompts formatted.\n")
 
-    # ── 2. Load model + tokenizer ─────────────────────────────────
+
     model, tokenizer = get_model_for_finetuning()
 
-    # ── 3. Apply LoRA adapters ────────────────────────────────────
     lora_config = LoraConfig(
         r=LORA_R,
         lora_alpha=LORA_ALPHA,
@@ -112,7 +110,6 @@ def run_finetuning():
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters() 
 
-    # ── 4. Training arguments ─────────────────────────────────────
     training_args = TrainingArguments(
         output_dir=OUTPUT_DIR,
         num_train_epochs=EPOCHS,
@@ -139,18 +136,16 @@ def run_finetuning():
         metric_for_best_model="eval_loss",
         report_to="none",
 
-        # precision (bfloat16 is more stable than fp16 for fine-tuning)
         fp16=False,
         bf16=True,
 
-        # reproducibility
         seed=SEED,
         data_seed=SEED,
 
-        group_by_length=True,    # fewer padding tokens -> faster training
+        group_by_length=True,   
     )
 
-    # ── 5. Trainer ────────────────────────────────────────────────
+
     trainer = SFTTrainer(
         model=model,
         args=training_args,
@@ -162,16 +157,16 @@ def run_finetuning():
         packing=False,
     )
 
-    # ── 6. Train ──────────────────────────────────────────────────
+    # Train ────
     print("\nStarting QLoRA fine-tuning...\n")
     train_result = trainer.train()
 
-    # ── 7. Save LoRA adapter ──────────────────────────────────────
+    # Save LoRA adapter ───
     trainer.model.save_pretrained(ADAPTER_DIR)
     tokenizer.save_pretrained(ADAPTER_DIR)
     print(f"\nLoRA adapter saved -> {ADAPTER_DIR}")
 
-    # ── 8. Save training metrics ──────────────────────────────────
+    # Save training metrics ──-
     metrics = train_result.metrics
     metrics["train_samples"] = len(train_dataset)
     metrics["val_samples"]   = len(val_dataset)
@@ -184,8 +179,6 @@ def run_finetuning():
 
 run_finetuning()
 
-# ─────────────────────────────────────────────
-# To load the fine-tuned model for evaluation:
 #
 #   from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 #   from peft import PeftModel

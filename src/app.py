@@ -5,6 +5,7 @@ from rag import RAG
 from rag_inference import RAGInference
 
 
+#Get the fine-tuned model and tokenizer
 model, tokenizer = get_fine_tuned_model()
 # model, tokenizer = get_base_model()
 # model, tokenizer = get_phi_2_model()

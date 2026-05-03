@@ -99,7 +99,7 @@ class RAG:
         if pdf_results["documents"][0]:
             return pdf_results["documents"][0]
         
-        # Fallback to general retrieval if no relevant PDF chunks found
+        # Fallback if PDF is not found.
         results = self.collection.query(
             query_embeddings=query_embedding,
             n_results=top_k
